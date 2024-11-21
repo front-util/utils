@@ -1,3 +1,3 @@
-# Front-utils/template
+# Front-utils/utils
 
-template repository for bun projects
+**Javascript utilities**

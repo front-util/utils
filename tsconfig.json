@@ -9,9 +9,14 @@
     "strict": true,
     "noImplicitAny": true,
     "moduleResolution": "node",
-    "baseUrl": "./src",
+    "baseUrl": ".",
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
+    "paths": {
+      "#src/*": [
+        "./src/utils/*"
+      ],
+    }
   },
   "exclude": [
     "node_modules",

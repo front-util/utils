@@ -16,14 +16,21 @@
     "./types": "./types/index.d.ts",
     "./types/index.d.ts": "./types/index.d.ts"
   },
+  "imports": {
+    "#src/*": "./src/utils/*"
+  },
   "scripts": {
     "check-lint": "eslint --max-warnings=0 --fix",
     "check-types": "tsc --noEmit",
     "test": "bun test",
     "publish": "bun run build && npm publish --access public",
-    "build-lib": "bun build ./src/index.ts --outdir ./dist --target browser --minify --format esm",
+    "build-lib": "bun build ./src/index.ts --outdir ./dist --target browser --format esm --minify",
     "build": "rm -rf dist && rm -rf types && bun run build-lib & tsc --p tsconfig.build.json"
   },
+  "browserslist": [
+    "chrome > 83",
+    "safari > 14.0"
+  ],
   "simple-git-hooks": {
     "pre-commit": "npx lint-staged --no-stash",
     "pre-push": "bun run test",
