@@ -13,4 +13,3 @@ tsconfig.json
 tsconfig.build.json
 
 tests/
-src/
