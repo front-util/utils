@@ -1,6 +1,6 @@
 {
   "name": "@front-utils/utils",
-  "version": "0.2.0",
+  "version": "0.2.3",
   "description": "Javascript utils",
   "author": "IVGolubev",
   "license": "ISC",
@@ -9,7 +9,7 @@
     "type": "git",
     "url": "https://github.com:front-util/utils.git"
   },
-  "types": "./types/index.d.ts",
+  "types": "./types/src/index.d.ts",
   "exports": {
     ".": "./dist/index.js",
     "./packages": "./src/utils/index.ts",
@@ -24,7 +24,7 @@
     "check-lint": "eslint --max-warnings=0 --fix",
     "check-types": "tsc --noEmit",
     "test": "bun test",
-    "publish": "bun run build && npm publish --access public",
+    "publish-pkg": "bun run build && npm publish --access public",
     "build-lib": "bun build ./src/index.ts --outdir ./dist --target browser --format esm --minify",
     "build": "rm -rf dist && rm -rf types && bun run build-lib & tsc --p tsconfig.build.json"
   },

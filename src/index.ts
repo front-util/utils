@@ -4,6 +4,7 @@ import * as fileUtils from './utils/file';
 import * as netUtils from './utils/net';
 import * as baseUtils from './utils/base';
 import * as numberUtils from './utils/number';
+import * as imageUtils from './utils/image';
 
 export * from './types';
 
@@ -14,4 +15,15 @@ export const utils = {
     net   : netUtils,
     base  : baseUtils,
     number: numberUtils,
+    image : imageUtils,
+};
+
+export default {
+    ...checkUtils,
+    ...dateUtils,
+    ...fileUtils,
+    ...netUtils,
+    ...baseUtils,
+    ...numberUtils,
+    ...imageUtils,
 };
