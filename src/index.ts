@@ -6,9 +6,9 @@ import * as baseUtils from './utils/base';
 import * as numberUtils from './utils/number';
 import * as imageUtils from './utils/image';
 
-export * from './types';
+export * from './utils/index';
 
-export const utils = {
+const utils = {
     check : checkUtils,
     data  : dateUtils,
     file  : fileUtils,
@@ -18,12 +18,4 @@ export const utils = {
     image : imageUtils,
 };
 
-export default {
-    ...checkUtils,
-    ...dateUtils,
-    ...fileUtils,
-    ...netUtils,
-    ...baseUtils,
-    ...numberUtils,
-    ...imageUtils,
-};
+export default utils;
