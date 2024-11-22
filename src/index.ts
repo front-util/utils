@@ -10,7 +10,7 @@ export * from './utils/index';
 
 const utils = {
     check : checkUtils,
-    data  : dateUtils,
+    date  : dateUtils,
     file  : fileUtils,
     net   : netUtils,
     base  : baseUtils,
