@@ -105,3 +105,28 @@ export const safeHandleDecorateAsync = <T extends unknown[], R>(operation: (...a
         }
     };
 };
+
+export const shallowCompare = <T extends Record<string, unknown>>(propsA?: T | null, propsB?: T | null): boolean => {
+    if(Object.is(propsA, propsB)) {
+        return true;
+    }
+
+    if(typeof propsA !== 'object' || propsA === null || typeof propsB !== 'object' || propsB === null) {
+        return false;
+    }
+
+    const keysA = Object.keys(propsA);
+    const keysB = Object.keys(propsB);
+
+    if(keysA.length !== keysB.length) {
+        return false;
+    }
+
+    for(const key of keysA) {
+        if(!Object.prototype.hasOwnProperty.call(propsB, key) || !Object.is(propsA[key], propsB[key])) {
+            return false;
+        }
+    }
+
+    return true;
+};

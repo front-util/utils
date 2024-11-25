@@ -5,17 +5,18 @@
 ### Base
 
 
-| name                    | description                                                     |
-| ----------------------- | --------------------------------------------------------------- |
-| declOfNum               | Returns a string from the decls array.                          |
-| uuid                    | Returns a UUID string.                                          |
-| iteratorToList          | Returns an array of values from the iterator.                   |
-| createObserver          | Returns an ObserverInstance with subscribe and notify methods.  |
-| randomIntMinMax         | Returns a random integer.                                       |
-| replaceSearchMatch      | Returns a modified string with matches replaced.                |
-| createSafetyRegString   | Returns a string with escaped special characters.               |
-| safeHandleDecorate      | Returns a tuple with an error or result.                        |
-| safeHandleDecorateAsync | Returns a promise resolving to a tuple with an error or result. |
+| name                    | description                                                                                                                       |
+| ----------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| declOfNum               | Returns a string from the decls array.                                                                                            |
+| uuid                    | Returns a UUID string.                                                                                                            |
+| iteratorToList          | Returns an array of values from the iterator.                                                                                     |
+| createObserver          | Returns an ObserverInstance with subscribe and notify methods.                                                                    |
+| randomIntMinMax         | Returns a random integer.                                                                                                         |
+| replaceSearchMatch      | Returns a modified string with matches replaced.                                                                                  |
+| createSafetyRegString   | Returns a string with escaped special characters.                                                                                 |
+| safeHandleDecorate      | Returns a tuple with an error or result.                                                                                          |
+| safeHandleDecorateAsync | Returns a promise resolving to a tuple with an error or result.                                                                   |
+| shallowCompare          | Utility that checks if two objects have the same keys and values at the first level of depth, without considering nested objects. |
 
 ### Check
 
