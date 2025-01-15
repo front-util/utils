@@ -1,6 +1,6 @@
 {
   "name": "@front-utils/utils",
-  "version": "0.2.6",
+  "version": "0.2.7",
   "description": "Javascript utils",
   "author": "IVGolubev",
   "license": "ISC",
@@ -9,7 +9,7 @@
     "type": "git",
     "url": "https://github.com:front-util/utils.git"
   },
-  "types": "./types/src/index.d.ts",
+  "types": "./types/index.d.ts",
   "exports": {
     ".": "./dist/index.js",
     "./packages": "./src/utils/index.ts",
