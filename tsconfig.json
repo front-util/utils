@@ -12,11 +12,22 @@
     "baseUrl": ".",
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "exactOptionalPropertyTypes": true,
+    "declaration": true,
+    "declarationDir": "./types",
+    "sourceMap": true,
     "paths": {
       "#src/*": [
         "./src/utils/*"
-      ],
-    }
+      ]
+    },
+    "noFallthroughCasesInSwitch": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "strictPropertyInitialization": true
   },
   "exclude": [
     "node_modules",

@@ -29,7 +29,7 @@ export const fileToBase64 = async (file: File): Promise<{result?: Base64String |
         };
     } catch(error) {
         return {
-            result: undefined,
+            result: null,
             error : error as null,
         };
     }

@@ -300,9 +300,9 @@ export const getFullDatePeriod = (startDateStr?: string, endDateStr?: string) =>
     return `${getFullDateString(new Date(startDateStr))} - ${getFullDateString(new Date(endDateStr))}`;
 };
 
-export const getCurrentWeekStartDate = (dateStr: TDateISO, firstDayOfWeekIndex: number = 1) => {
+export const getCurrentWeekStartDate = (dateStr: TDateISO, firstDayOfWeekIndex: number = 1): Date | undefined => {
     if(!isValidDate(dateStr)) {
-        return;
+        return undefined;
     }
 
     try {
@@ -317,6 +317,7 @@ export const getCurrentWeekStartDate = (dateStr: TDateISO, firstDayOfWeekIndex: 
     } catch(err) {
         console.error(err);
     }
+    return undefined;
 };
 
 export const getNextWeekPeriod = (dateStr: TDateISO) => {

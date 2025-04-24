@@ -1,4 +1,4 @@
-import {describe, it, expect, mock} from 'bun:test';
+import {describe, it, expect, vi} from 'vitest';
 
 import {
     uuid,
@@ -161,7 +161,7 @@ describe('[utils/base]', () => {
     describe('- safeHandleDecorateAsync', () => {
         // Returns a tuple with null error and result when operation succeeds
         it('should return a tuple with null error and result when operation succeeds', async () => {
-            const operation = mock().mockResolvedValue('success');
+            const operation = vi.fn().mockResolvedValue('success');
             const decoratedOperation = safeHandleDecorateAsync(operation);
             const result = await decoratedOperation();
     
@@ -170,7 +170,7 @@ describe('[utils/base]', () => {
     
         // Handles asynchronous operations correctly and returns a promise
         it('should handle asynchronous operations and return a promise', async () => {
-            const operation = mock().mockResolvedValue('async result');
+            const operation = vi.fn().mockResolvedValue('async result');
             const decoratedOperation = safeHandleDecorateAsync(operation);
             const resultPromise = decoratedOperation();
     
@@ -182,7 +182,7 @@ describe('[utils/base]', () => {
     
         // Properly awaits the operation and returns the result
         it('should properly await the operation and return the result', async () => {
-            const operation = mock().mockResolvedValue('awaited result');
+            const operation = vi.fn().mockResolvedValue('awaited result');
             const decoratedOperation = safeHandleDecorateAsync(operation);
             const result = await decoratedOperation();
     
@@ -192,7 +192,7 @@ describe('[utils/base]', () => {
         // Returns a tuple with error and null result when operation throws an error
         it('should return a tuple with error and null result when operation throws an error', async () => {
             const error = new Error('operation failed');
-            const operation = mock().mockRejectedValue(error);
+            const operation = vi.fn().mockRejectedValue(error);
             const decoratedOperation = safeHandleDecorateAsync(operation);
             const result = await decoratedOperation();
     
@@ -201,13 +201,13 @@ describe('[utils/base]', () => {
     
         // Handles operations that return promises resolving to null or undefined
         it('should handle operations returning promises resolving to null or undefined', async () => {
-            const operation = mock().mockResolvedValue(null);
+            const operation = vi.fn().mockResolvedValue(null);
             const decoratedOperation = safeHandleDecorateAsync(operation);
             const result = await decoratedOperation();
     
             expect(result).toEqual([null, null]);
         
-            const operationUndefined = mock().mockResolvedValue(undefined);
+            const operationUndefined = vi.fn().mockResolvedValue(undefined);
             const decoratedOperationUndefined = safeHandleDecorateAsync(operationUndefined);
             const resultUndefined = await decoratedOperationUndefined();
     
@@ -216,7 +216,7 @@ describe('[utils/base]', () => {
     
         // Manages operations with no arguments gracefully
         it('should manage operations with no arguments gracefully', async () => {
-            const operation = mock().mockResolvedValue('no args');
+            const operation = vi.fn().mockResolvedValue('no args');
             const decoratedOperation = safeHandleDecorateAsync(operation);
             const result = await decoratedOperation();
     
