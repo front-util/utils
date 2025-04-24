@@ -1,4 +1,4 @@
-import {describe, it, expect} from 'vitest';
+import {describe, it, expect, beforeAll} from 'vitest';
 
 import {
     getDateString,
@@ -31,6 +31,10 @@ import { TDateISO } from '../src/types';
 const CURRENT_YEAR = new Date().getFullYear();
 
 describe('[utils/date]', () => {
+    beforeAll(() => {
+        process.env.TZ = "Europe/Moscow";
+    });
+
     describe('- formatShortEndDate', () => {
         it('test_index_0_returns_correct', () => {
             expect(formatShortEndDate(new Date('2000-06-15T06:07:14.200Z'))).toBe('2000-06-15');

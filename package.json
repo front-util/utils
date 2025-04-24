@@ -9,7 +9,7 @@
     "type": "git",
     "url": "https://github.com/front-utils/utils.git"
   },
-  "types": "./types/src/index.d.ts",
+  "types": "./types/index.d.ts",
   "exports": {
     ".": {
       "types": "./types/index.d.ts",
