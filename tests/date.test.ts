@@ -25,7 +25,7 @@ import {
     getNextMonthPeriodDates,
     formatShortEndDate,
     compareDates
-} from '#src/date';
+} from '../src/utils/date';
 import { TDateISO } from '../src/types';
 
 const CURRENT_YEAR = new Date().getFullYear();

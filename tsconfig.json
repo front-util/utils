@@ -8,7 +8,7 @@
     "rootDir": ".",
     "strict": true,
     "noImplicitAny": true,
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "baseUrl": ".",
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
@@ -19,11 +19,6 @@
     "declaration": true,
     "declarationDir": "./types",
     "sourceMap": true,
-    "paths": {
-      "#src/*": [
-        "./src/utils/*"
-      ]
-    },
     "noFallthroughCasesInSwitch": true,
     "strictNullChecks": true,
     "strictFunctionTypes": true,

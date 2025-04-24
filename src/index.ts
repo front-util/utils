@@ -7,6 +7,7 @@ import * as numberUtils from './utils/number';
 import * as imageUtils from './utils/image';
 
 export * from './utils/index';
+export * from './types';
 
 const utils = {
     check : checkUtils,

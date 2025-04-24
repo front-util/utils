@@ -8,7 +8,7 @@ import {
     safeHandleDecorate,
     safeHandleDecorateAsync,
     shallowCompare
-} from '#src/base';
+} from '../src/utils/base';
 
 describe('[utils/base]', () => {
     describe('[utils/crypto]', () => {

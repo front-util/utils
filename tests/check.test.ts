@@ -10,7 +10,7 @@ import {
     isNumber,
     isObject,
     isUndefined
-} from '#src/check';
+} from '../src/utils/check';
 
 describe('[utils/check]', () => {
     describe('[utils/isString]', () => {
